@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/sky-homes/static/css/main.26c65000.css",
+    "main.js": "/sky-homes/static/js/main.fee25c48.js",
+    "static/media/home1.jpg": "/sky-homes/static/media/home1.543beb33277481a48fd9.jpg",
+    "static/media/home2.jpg": "/sky-homes/static/media/home2.e546de7227c1f0b17a45.jpg",
+    "static/media/home3.jpg": "/sky-homes/static/media/home3.747ee8031cd30335f563.jpg",
+    "static/media/3.jpg": "/sky-homes/static/media/3.078250e6464e907507db.jpg",
+    "static/media/1.jpg": "/sky-homes/static/media/1.4ebd688aa5a59aec19bb.jpg",
+    "static/media/2.jpg": "/sky-homes/static/media/2.d473fcc73a4c6aa0acca.jpg",
+    "static/media/4.jpg": "/sky-homes/static/media/4.38f0ea1ae0ad7f280304.jpg",
+    "static/media/project1.jpg": "/sky-homes/static/media/project1.698477369f73b385e676.jpg",
+    "index.html": "/sky-homes/index.html",
+    "main.26c65000.css.map": "/sky-homes/static/css/main.26c65000.css.map",
+    "main.fee25c48.js.map": "/sky-homes/static/js/main.fee25c48.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.26c65000.css",
+    "static/js/main.fee25c48.js"
+  ]
+}
