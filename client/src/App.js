@@ -12,7 +12,7 @@ import Footer from "./components/footer/Footer";
 function App() {
   return (
     <div className="App">
-      <Router basename="/sky-home">
+      <Router basename="/sky-home"> 
         <NavbarRes />
         <Routes>
           <Route path="/" element={<Home />} />
