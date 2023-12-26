@@ -1,0 +1,177 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px); /* Adjust the initial translateY as needed */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.contact-page {
+    width: 100%;
+    background-color: var(--secondary);
+    padding: 100px 40px 20px;
+
+    .page-wrapper {
+        max-width: 1400px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        color: var(--clr-txt-white);
+        align-items: center;
+        position: relative;
+        margin: 0 auto;
+
+
+
+
+
+
+        .contact-heading {
+            width: 100%;
+            font-size: 26px;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0px;
+            margin: 20px 0 40px;
+            align-items: center;
+            text-transform: uppercase;
+            animation: fadeUp 0.5s ease-out;
+            
+            
+            
+        }
+
+        .details {
+            width: 100%;
+            min-height: 200px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            column-gap: 20px;
+            justify-content: center;
+            row-gap: 10px;
+            margin-bottom: 50px;
+            animation: fadeUp 0.5s ease-out;
+            
+            .card {
+
+                min-width: 22%;
+                min-height: fit-content;
+                padding: 20px 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                
+                .img {
+                    display: block;
+                    align-items: center;
+                    justify-content: center;
+                    fill: transparent;
+                    width: 50px;
+                    height: 50px;
+                    margin: 20px 0;
+                    scale: 1;
+                    transition: scale 0.4s ease-in-out;
+                    stroke: var(--clr-svg-primary);
+                    stroke-width: 20px;
+
+                }
+
+                &:hover .img {
+                    scale: 1.2;
+                }
+
+                .title {
+                    font-size: 20px;
+                    font-weight: bold;
+                    padding: 20px 0px;
+                }
+
+                .content {
+                    text-transform: capitalize;
+                    text-align: center;
+                    font-size: 16px;
+
+                    p {
+                        padding: 2px 0;
+                        line-height: 1.2;
+                        color: var(--clr-txt-dark);
+
+                        span {
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+
+            .mid {
+
+                border-left: 1px solid var(--clr-border-primary);
+                border-right: 1px solid var(--clr-border-primary);
+
+            }
+        }
+
+        .map {
+            max-width: 1400px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 200px;
+            margin-bottom: 50px;
+            animation: fadeUp 2s ease-out;            
+        }
+
+        .contact-form {
+            max-width: 1400px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            min-height: 200px;
+            margin-bottom: 50px;
+            // animation: fadeUp 0.5s ease-out;
+        }
+
+
+    }
+}
+
+/* Styles for smartphones */
+// @media only screen and (max-width: 480px) {
+//   }
+
+/* Styles for tablets */
+@media only screen and (min-width: 481px) and (max-width: 896px) {
+    .contact-page{
+        padding: 100px 10px 20px;
+    
+        .page-wrapper .details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 10px;
+            .card{
+                min-width: 80%;
+            }
+            .mid {
+                border-left: none;
+                border-right: none;
+                border-top: 1px solid var(--clr-border-primary);
+                border-bottom: 1px solid var(--clr-border-primary);
+            }
+        }
+    } 
+
+}
+
+/* Styles for small desktop screens */
+// @media only screen and (min-width: 769px) and (max-width: 1024px) {
+//   }
+
+/* Styles for large desktop screens */
+// @media only screen and (min-width: 1025px) {
+//   }

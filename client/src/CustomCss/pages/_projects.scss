@@ -1,0 +1,92 @@
+.project-page {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 80px 0 ;
+    background-color: rgb(35, 35, 68);
+
+    
+    .selection {
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 30px; 
+        
+        .items {
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            
+            .item {
+                padding: 10px 20px;
+                margin: 10px 10px;
+                cursor: pointer;
+                color: #ddd;
+                border-radius: 15px;
+                
+
+                &:hover {
+                    background-color: crimson;
+
+                }
+            }
+
+            .active {
+                background-color: crimson;
+            }
+
+        }
+    }
+    // .Project-heading {
+    //     height: fit-content;
+    //     width: 100%;
+    //     border-left: solid 6px crimson;
+    //     font-size: 20px;
+    //     font-weight: bold;
+    //     color: #ddd;
+    //     text-transform: uppercase;
+    //     padding: 10px 10px;
+    //     background-color: rgba($color: black, $alpha: .2);
+    //     margin-bottom:50px ;
+    // }
+    .project {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        .section {
+            min-width: 100%;
+            height: fit-content;
+            margin-bottom: 40px;
+            padding-top: 30px;
+
+
+            .sub-heading{
+                width: 100%;
+                background-color: rgba($color: black, $alpha: .2);
+                font-size: 18px;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: 10px 10px;
+                border-left: solid 6px rgb(46, 46, 88);
+                color: #ddd;
+
+             }
+
+            .container {
+              
+            }
+        }
+    }
+
+    
+
+    
+
+}

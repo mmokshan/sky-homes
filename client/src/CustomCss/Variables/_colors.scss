@@ -1,0 +1,50 @@
+:root {
+
+  /*========== theam Colors-01 ==========*/
+
+
+
+  /*========== theam Colors-02 ==========*/
+  --body: #F5F5F5;
+  --magic: #745831;
+  --shade: #cfcbcbae;
+  --primary: #B8894A;
+  
+  --secondary: #20262A;
+ 
+  --black: black;
+  --white: white;
+  --transparent: transparent;
+  
+  --hover: var(--magic);
+  --svg: var(--body);
+  --border: var(--shade);
+  
+  /* ============background-clr====================*/
+
+  --clr-bg-body: var(--body);
+  --clr-bg-magic: var(--magic);
+  --clr-bg-shaded: var(--shade);
+  --clr-bg-primary: var(--primary);
+  --clr-bg-secondary: var(--secondary);
+  --clr-bg-transparent: var(--transparent);
+  --clr-bg-black: var(--black);
+  --clr-bg-white: var(--white);
+
+  /* ============text-clr====================*/
+
+  --clr-txt-body: var(--body);
+  --clr-txt-magic: var(--magic);
+  --clr-txt-shade: var(--shade);
+  --clr-txt-primary: var(--primary);
+  --clr-txt-secondary: var(--secondary);
+  --clr-txt-transparent: var(--transparent);
+  --clr-txt-black: var(--black);
+  --clr-txt-white: var(--white);
+
+
+--clr-svg-primary:var(--white);
+--clr-svg-secondary:var(--shade);
+
+
+}

@@ -1,0 +1,75 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap");
+
+:root {
+    --w-max: 1200px;
+
+    --h-nav: 3.5rem;
+    --h-nav-stiky: 3rem;
+    --h-footer: 300px;
+    --h-footer-copyrights: 50px;
+
+
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+
+    --font-body: "Montserrat", sans-serif;
+    --font-navlink: "Montserrat", sans-serif;
+
+
+    --fs-nav-link: .938rem;
+    --fs-normal: .938rem;
+    --fs-headding: 32px;
+    --fs-sub-headding: 28px;
+    --fs-title: 24px;
+    --fs-sub-title: 20px;
+    --fs-body: 15px;
+
+    --fs-1: 12px;
+    --fs-2: 14px;
+    --fs-3: 16px;
+    --fs-4: 18px;
+    --fs-5: 20px;
+    --fs-6: 22px;
+    --fs-7: 24px;
+    --fs-8: 26px;
+
+
+    /*========== Font weight ==========*/
+    --fw-thin: 400;
+    --fw-regular: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+
+    /*========== z index ==========*/
+    --z-tooltip: 99;
+    --z-fixed: 100;
+
+
+}
+
+.button {
+    margin-top: 30px;
+    padding: 8px 18px;
+    border: none;
+    background-color: transparent;
+    border-radius: 7px;
+    border: 1px solid var(--secondary);
+
+
+    & a {
+        color: var(--secondary);
+        letter-spacing: 3px;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+    &:hover{
+        background-color: var(--primary);
+        border: 1px solid var(--body);
+        & a{
+
+            color: var(--clr-txt-body);
+        }
+    
+    }
+}

@@ -1,0 +1,359 @@
+:root {
+   --clr-nav-bg: var(--clr-bg-primary);
+   --clr-nav-bg-sticky: var(--transparent);
+   --clr-nav-txt-link: var(--magic);
+   --clr-nav-txt-link-sticky: var(--clr-txt-body);
+   --clr-nav-txt-sub-link: var(--clr-txt-body);
+   --clr-nav-bg-hover: var(--hover);
+   --clr-nav-txt-hover: var(--secondary);
+   --clr-nav-border: var(--border);
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1024px) {
+   :root {
+      --fs-nav-link: 1rem;
+   }
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+   max-width: var(--w-max);
+   padding: 0 30px;
+}
+
+/*=============== HEADER ===============*/
+.header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: var(--clr-nav-bg);
+   z-index: var(--z-fixed);
+}
+
+/*=============== NAV ===============*/
+.nav {
+   height: var(--h-nav);
+
+   &__logo,
+   &__burger,
+   &__close {
+      color: var(--clr-nav-txt-link);
+   }
+
+   &__data {
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__logo {
+      display: inline-flex;
+      align-items: center;
+      column-gap: .25rem;
+      font-weight: var(--font-semi-bold);
+
+
+      & i {
+         font-weight: initial;
+         font-size: 1.25rem;
+      }
+   }
+
+   &__toggle {
+      position: relative;
+      width: 32px;
+      height: 32px;
+   }
+
+   &__burger,
+   &__close {
+      position: absolute;
+      width: max-content;
+      height: max-content;
+      inset: 0;
+      margin: auto;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: opacity .1s, transform .4s;
+   }
+
+   &__close {
+      opacity: 0;
+   }
+
+   &__link,
+   &__dropdown-link {
+      color: var(--clr-nav-txt-link-sticky);
+
+      &:hover {
+         color: var(--clr-nav-txt-hover);
+      }
+
+   }
+
+   &__link {
+      font-weight: var(--font-semi-bold);
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: background-color .3s;
+
+      &:hover {
+         background-color: var(--clr-nav-bg-hover)
+      }
+   }
+
+
+
+
+}
+
+.dropdown {
+   &__item {
+      cursor: pointer;
+
+   }
+
+   &__arrow {
+      font-size: 1.25rem;
+      font-weight: initial;
+      transition: transform .4s;
+   }
+
+   &__link {
+      color: var(--clr-nav-txt-link-sticky);
+      padding: .7rem 1.25rem .7rem 2.5rem;
+      background-color: var(--clr-nav-bg);
+      display: flex;
+      align-items: center;
+      column-gap: .2rem;
+      font-weight: var(--font-semi-bold);
+      transition: background-color .3s;
+
+
+      &:hover {
+         background-color: var(--clr-nav-bg-hover);
+         color: var(--clr-nav-txt-hover);
+      }
+   }
+
+
+   &__menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease-out;
+   }
+
+   // Show dropdown menu
+   &__item:hover &__menu {
+      max-height: 1000px;
+      transition: max-height .4s ease-in;
+   }
+
+   // Rotate dropdown icon
+   &__item:hover &__arrow {
+      transform: rotate(180deg);
+   }
+}
+
+
+
+
+
+
+// ......................DROPDOWN SUBMENU...................
+// .dropdown{
+//    &__add{
+//       margin-left: auto;
+//    }
+//    &__sublink{
+//       background-color: var(--clr-nav-bg-lighten);
+//    }
+// }
+
+
+
+
+/*=============== BREAKPOINTS ===============*/
+// mobile & tablet
+@media only screen and (min-width: 340px) and (max-width: 896px) {
+
+   .nav {
+      &__menu {
+         opacity: 0;
+         position: absolute;
+         left: 0;
+         top: 2.5rem;
+         width: 100%;
+         height: calc(100vh - 3.5rem);
+         overflow: auto;
+         pointer-events: none;
+         transition: top .4s, opacity .3s;
+
+         &::-webkit-scrollbar {
+            width: 0;
+         }
+      }
+
+      &__list {
+         background-color: var(--clr-nav-bg);
+         padding-top: 1rem;
+      }
+
+   }
+   /* Show menu */
+.show-menu {
+   opacity: 1;
+   top: 3rem;
+   pointer-events: initial;
+}
+
+/* Show icon */
+.show-icon .nav__burger {
+   opacity: 0;
+   transform: rotate(90deg);
+}
+
+.show-icon .nav__close {
+   opacity: 1;
+   transform: rotate(90deg);
+}
+}
+
+
+// for small screens
+@media only screen and (max-width: 340px) {
+
+   .container {
+      padding: 0 10px;
+   }
+
+   .nav__link {
+      padding-inline: 0;
+   }
+}
+//For larger screens
+
+@media only screen and (min-width: 896px) {
+   .header {
+      background-color: var(--clr-nav-bg-sticky);
+      transition: color .350s ease-out;
+    
+
+      &.sticky {
+         background-color: var(--clr-nav-bg);
+         transition: background-color .35s ease-in;
+      }
+
+      &.sticky .nav {
+         height: var(--h-nav-stiky);
+         transition: height .350s ease-in-out;
+         &__link,
+         &__dropdown-link {
+            color: var(--clr-nav-txt-link-sticky);
+      
+            &:hover {
+               color: var(--clr-nav-txt-hover);
+            }
+      
+         }
+      }
+
+      &.sticky .nav__link {
+         color: var(--clr-nav-txt-link-sticky);
+      }
+
+      &.sticky .nav__menu .dropdown__item .dropdown__menu {
+         top: 3rem;
+
+      }
+
+      &.sticky .nav__menu .dropdown__item:hover .dropdown__menu {
+         top: 3rem;
+
+      }
+
+   }
+
+   .container {
+      margin-inline: auto;
+   }
+
+   .nav {
+      height: calc(var(--h-nav) + 2rem);
+      display: flex;
+      justify-content: space-between;
+
+      &__toggle {
+         display: none;
+      }
+
+      &__list {
+         height: 100%;
+         display: flex;
+         column-gap: 3rem;
+      }
+
+      &__link {
+         height: 100%;
+         padding: 0;
+         justify-content: initial;
+         column-gap: .25rem;
+         // color: var(--clr-nav-txt-link);
+
+
+         &:hover {
+            background-color: var(--clr-nav-bg-sticky);
+            color: var(--clr-nav-txt-hover);
+         }
+      }
+
+
+      &__dropdown-link {
+         // color: var(--clr-nav-txt-link);
+         background-color:var(--clr-nav-bg-sticky);
+
+      }
+   }
+
+   .dropdown {
+      &__item {
+         position: relative;
+      }
+
+      &__menu {
+         min-width: 250px;
+         max-height: initial;
+         overflow: initial;
+         position: absolute;
+         left: 0;
+         top: 6rem;
+         opacity: 0;
+         pointer-events: none;
+         transition: opacity .3s, top .3s;
+      }
+
+      &__link {
+         padding-inline: 1rem 3.5rem;
+
+      }
+
+      &__link:hover {
+         color: var(--clr-nav-txt-hover);
+      }
+
+
+      // Show dropdown menu
+      &__item:hover &__menu {
+         opacity: 1;
+         top: 5.5rem;
+         pointer-events: initial;
+         transition: top .3s;
+      }
+
+   }
+}

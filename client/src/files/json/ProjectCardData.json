@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "imgURL": "project1.jpg",
+    "title": "Adithyaa Ayurvedaya Building",
+    "label": "Building Projects",
+    "status": "Ongoing"
+  },
+  {
+    "id": 2,
+    "imgURL": "project1.jpg",
+    "title": "Red Cross Building",
+    "label": "Road Projects",
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "imgURL": "project1.jpg",
+    "title": "Office Building",
+    "label": "Irrigation Projects",
+    "status": "Ongoing"
+  },
+  {
+    "id": 4,
+    "imgURL": "project1.jpg",
+    "title": "Police Office Building",
+    "label": "Steel Structures",
+    "status": "Completed"
+  },
+  {
+    "id": 5,
+    "imgURL": "project1.jpg",
+    "title": "School Ground",
+    "label": "Steel Structures",
+    "status": "Ongoing"
+  },
+  {
+    "id": 6,
+    "imgURL": "project1.jpg",
+    "title": "Perera's House",
+    "label": "Steel Structures",
+    "status": "Completed"
+  }
+]
